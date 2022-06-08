@@ -16,9 +16,9 @@ const styles = StyleSheet.create({
     borderWidth: 0,
   },
   infoContainer: {
-    width: Platform.OS === 'ios' ? 500 : 280,
-    minHeight: Platform.OS === 'ios' ? 300 : 180,
-    paddingVertical: 12,
+    maxWidth: Platform.OS === 'ios' ? 480 : 280,
+    minHeight: Platform.OS === 'ios' ? 280 : 180,
+    marginTop: 16,
     alignItems: 'center',
   },
 });

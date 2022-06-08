@@ -47,7 +47,6 @@ export default function MovieCard(props: Props) {
           <CardImage source={props.image} />
         </CardLayout>
       </TouchableHighlight>
-
       <View style={styles.infoContainer}>
         <Title> {showText ? props.title : null}</Title>
         <Description>{showText ? props.description : null}</Description>

@@ -26,7 +26,7 @@ export const Title = styled.Text`
   color: #fff;
   font-weight: bold;
   ${Platform.select({
-    ios: `font-size: 35px; margin-vertical: 12px`,
+    ios: `font-size: 35px; margin-vertical: 14px`,
     android: `font-size: 22px; margin-bottom: 10px`,
   })};
 `;
