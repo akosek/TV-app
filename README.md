@@ -1,8 +1,9 @@
 # TV-app
 
-React Native app fort SmartTV
+React Native app for SmartTV
 
-You can test this TV app on tvOS or AndroidTV. In ordet to do so, please make sure you have both xCode and Android Studio installed.
+You can test this TV app on tvOS or AndroidTV.
+In order to do so, please make sure you have both Xcode and Android Studio installed.
 
 # For tvOs run in Terminal:
 
