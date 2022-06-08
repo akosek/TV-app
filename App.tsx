@@ -8,18 +8,12 @@
 
 import React from 'react';
 import type {Node} from 'react';
-import ReactNative, {
-  Platform,
-  SafeAreaView,
-  StyleSheet,
-  useColorScheme,
-  View,
-} from 'react-native';
+import ReactNative, {SafeAreaView, useColorScheme} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 //Components
-import MovieCard from './src/components/MovieCard/MovieCard';
+import HomeScreen from './src/containers/HomeScreen';
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -34,30 +28,9 @@ const App: () => Node = () => {
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <View style={styles.sectionContainer}>
-        <MovieCard
-          title="Grand Budapest Hotel"
-          description="lalala ksndksjndkjs akjnskajns"
-          image={require('./assets/images/grandBudapest.png')}
-        />
-        <MovieCard
-          title="Tannenbaums"
-          description="lalala ksndksjndkjs akjnskajns"
-          image={require('./assets/images/tanenbaums.png')}
-        />
-      </View>
+      <HomeScreen />
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    display: 'flex',
-    flex: 1,
-    flexDirection: 'row',
-    justifyContnet: 'center',
-    alignItems: 'center',
-  },
-});
 
 export default App;

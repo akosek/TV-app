@@ -10,10 +10,12 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     fontFamily: 'LifeSavers-Bold',
   },
-  infoContainer: {
-    paddingVertical: 12,
-    //  alignItems: 'center',
-    height: 100,
+  sectionContainer: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'row',
+    justifyContnet: 'center',
+    alignItems: 'center',
   },
 });
 
