@@ -1,14 +1,23 @@
 import React, {useState} from 'react';
 
 // UI & Styles
-import {View, TouchableHighlight, Text} from 'react-native';
+import {View, TouchableHighlight, Text, Platform} from 'react-native';
 import styled from 'styled-components/native';
 import styles from './movieCardStyles';
 
 const CardLayout = styled.View`
-  height: 600px;
-  width: 460px;
   padding: 15px;
+  ${Platform.select({
+    ios: `
+      height: 600px;
+      width: 460px;
+    `,
+    android: `
+      height: 300px;
+      width: 260px;
+      color: red;
+    `,
+  })};
 `;
 
 const CardImage = styled.Image`
@@ -19,15 +28,19 @@ const CardImage = styled.Image`
 
 const Title = styled.Text`
   text-align: center;
-  font-size: 30px;
-  margin-vertical: 12px;
   color: #fff;
+  ${Platform.select({
+    ios: `font-size: 30px;`,
+    android: `font-size: 20px; margin-bottom: 10px`,
+  })};
 `;
 
 const Description = styled.Text`
-  text-align: center;
-  font-size: 24px;
   color: #fff;
+  ${Platform.select({
+    ios: `font-size: 24px;`,
+    android: `font-size: 14px; line-height:20px`,
+  })};
 `;
 
 export type Props = {

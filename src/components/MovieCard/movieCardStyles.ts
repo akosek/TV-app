@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {Platform} from 'react-native';
 
 const styles = StyleSheet.create({
   cardContainer: {
@@ -17,15 +18,11 @@ const styles = StyleSheet.create({
     fontFamily: 'LifeSavers-Bold',
   },
   infoContainer: {
-    maxWidth: 510,
+    maxWidth: Platform.OS === 'ios' ? 510 : 260,
     minHeight: 200,
     paddingVertical: 12,
     alignItems: 'center',
-    justifyContent: 'center',
-  },
-  movieText: {
-    fontSize: 20,
-    color: '#fff',
+    //  justifyContent: 'center',
   },
 });
 

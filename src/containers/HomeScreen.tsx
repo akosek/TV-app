@@ -5,6 +5,7 @@ import {View} from 'react-native';
 import MovieCard from '../components/MovieCard/MovieCard';
 import styles from './homeScreenStyles';
 
+// Data
 import {movies} from '../../db';
 
 export default function HomeScreen() {

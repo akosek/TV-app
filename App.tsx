@@ -8,7 +8,7 @@
 
 import React from 'react';
 import type {Node} from 'react';
-import ReactNative, {SafeAreaView, useColorScheme} from 'react-native';
+import {SafeAreaView, useColorScheme} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
@@ -27,7 +27,13 @@ const App: () => Node = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView
+      style={{
+        backgroundColor: 'black',
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}>
       <HomeScreen />
     </SafeAreaView>
   );
