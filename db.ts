@@ -7,7 +7,7 @@ export const movies = [
   },
   {
     id: 2,
-    title: 'Tannenbaums',
+    title: 'Tenenbaums',
     text: 'The eccentric members of a dysfunctional family reluctantly gather under the same roof for various reasons.',
     image: require('./assets/images/tanenbaums.png'),
   },

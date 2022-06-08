@@ -8,13 +8,11 @@ const styles = StyleSheet.create({
   },
   cardDefault: {
     borderWidth: 0,
-    fontFamily: 'LifeSavers-Bold',
   },
   sectionContainer: {
-    display: 'flex',
     flex: 1,
     flexDirection: 'row',
-    justifyContnet: 'space-around',
+    justifyContnet: 'center',
     alignItems: 'center',
   },
 });

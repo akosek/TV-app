@@ -8,31 +8,17 @@
 
 import React from 'react';
 import type {Node} from 'react';
-import {SafeAreaView, useColorScheme} from 'react-native';
-
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {SafeAreaView} from 'react-native';
 
 //Components
 import HomeScreen from './src/containers/HomeScreen';
 
 const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-    flex: 1,
-    justifyContnet: 'center',
-    flexDirection: 'column',
-    alignItems: 'center',
-  };
-
   return (
     <SafeAreaView
       style={{
         backgroundColor: 'black',
-        flex: 1,
-        flexDirection: 'column',
-        alignItems: 'center',
+        flexGrow: 1,
       }}>
       <HomeScreen />
     </SafeAreaView>

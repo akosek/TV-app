@@ -6,23 +6,20 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    margin: 6,
   },
   cardFocused: {
     borderWidth: 3,
     borderColor: '#fff',
-    padding: 0,
+    justifyContent: 'center',
   },
   cardDefault: {
     borderWidth: 0,
-    fontFamily: 'LifeSavers-Bold',
   },
   infoContainer: {
-    maxWidth: Platform.OS === 'ios' ? 510 : 260,
-    minHeight: 200,
+    width: Platform.OS === 'ios' ? 500 : 280,
+    minHeight: Platform.OS === 'ios' ? 300 : 180,
     paddingVertical: 12,
     alignItems: 'center',
-    //  justifyContent: 'center',
   },
 });
 

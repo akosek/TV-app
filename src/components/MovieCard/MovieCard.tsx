@@ -1,47 +1,14 @@
 import React, {useState} from 'react';
 
 // UI & Styles
-import {View, TouchableHighlight, Text, Platform} from 'react-native';
-import styled from 'styled-components/native';
 import styles from './movieCardStyles';
-
-const CardLayout = styled.View`
-  padding: 15px;
-  ${Platform.select({
-    ios: `
-      height: 600px;
-      width: 460px;
-    `,
-    android: `
-      height: 300px;
-      width: 260px;
-      color: red;
-    `,
-  })};
-`;
-
-const CardImage = styled.Image`
-  flex: 1;
-  resize-mode: contain;
-  width: null;
-`;
-
-const Title = styled.Text`
-  text-align: center;
-  color: #fff;
-  ${Platform.select({
-    ios: `font-size: 30px;`,
-    android: `font-size: 20px; margin-bottom: 10px`,
-  })};
-`;
-
-const Description = styled.Text`
-  color: #fff;
-  ${Platform.select({
-    ios: `font-size: 24px;`,
-    android: `font-size: 14px; line-height:20px`,
-  })};
-`;
+import {View, TouchableHighlight} from 'react-native';
+import {
+  CardLayout,
+  CardImage,
+  Title,
+  Description,
+} from '../globalComponentsStyles';
 
 export type Props = {
   id: number;
@@ -71,7 +38,7 @@ export default function MovieCard(props: Props) {
     <View style={styles.cardContainer}>
       <TouchableHighlight
         style={focus ? styles.cardFocused : styles.cardDefault}
-        activeOpacity={0.9}
+        activeOpacity={0.8}
         onFocus={handleFocus}
         underlayColor="#fff"
         onBlur={handleBlur}
