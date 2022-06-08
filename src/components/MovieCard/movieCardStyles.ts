@@ -1,9 +1,15 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+  cardContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: 6,
+  },
   cardFocused: {
     borderWidth: 3,
-    borderColor: '#b0e0e6',
+    borderColor: '#fff',
     padding: 0,
   },
   cardDefault: {
@@ -11,9 +17,15 @@ const styles = StyleSheet.create({
     fontFamily: 'LifeSavers-Bold',
   },
   infoContainer: {
+    maxWidth: 510,
+    minHeight: 200,
     paddingVertical: 12,
-    //  alignItems: 'center',
-    height: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  movieText: {
+    fontSize: 20,
+    color: '#fff',
   },
 });
 

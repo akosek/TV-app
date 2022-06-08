@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flex: 1,
     flexDirection: 'row',
-    justifyContnet: 'center',
+    justifyContnet: 'space-around',
     alignItems: 'center',
   },
 });

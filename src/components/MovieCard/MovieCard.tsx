@@ -1,21 +1,14 @@
 import React, {useState} from 'react';
 
 // UI & Styles
-import {View, TouchableHighlight} from 'react-native';
+import {View, TouchableHighlight, Text} from 'react-native';
 import styled from 'styled-components/native';
 import styles from './movieCardStyles';
-
-export type Props = {
-  id: string;
-  title: string;
-  description: string;
-  image?: string;
-};
 
 const CardLayout = styled.View`
   height: 600px;
   width: 460px;
-  margin: 60px;
+  padding: 15px;
 `;
 
 const CardImage = styled.Image`
@@ -27,15 +20,22 @@ const CardImage = styled.Image`
 const Title = styled.Text`
   text-align: center;
   font-size: 30px;
-  color: white;
+  margin-vertical: 12px;
+  color: #fff;
 `;
 
 const Description = styled.Text`
-  display: flex;
+  text-align: center;
   font-size: 24px;
-  width: 500px;
-  color: white;
+  color: #fff;
 `;
+
+export type Props = {
+  id: number;
+  title: string;
+  description: string;
+  image?: string;
+};
 
 export default function MovieCard(props: Props) {
   const [focus, setFocus] = useState<boolean>(false);
@@ -47,6 +47,7 @@ export default function MovieCard(props: Props) {
 
   const handleBlur = () => {
     setFocus(false);
+    setShowText(false);
   };
 
   const handleText = () => {
@@ -54,12 +55,12 @@ export default function MovieCard(props: Props) {
   };
 
   return (
-    <View>
+    <View style={styles.cardContainer}>
       <TouchableHighlight
         style={focus ? styles.cardFocused : styles.cardDefault}
         activeOpacity={0.9}
         onFocus={handleFocus}
-        underlayColor="#DDDDDD"
+        underlayColor="#fff"
         onBlur={handleBlur}
         onPress={handleText}>
         <CardLayout>
